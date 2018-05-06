@@ -1,0 +1,27 @@
+{
+  "name": "github-profile-viewer",
+  "version": "0.0.1",
+  "description": "Fetch and display Github user profiles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Basil Meer",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-react": "^6.24.1",
+    "jshint": "^2.9.5",
+    "jshint-loader": "^0.8.4",
+    "node-libs-browser": "^2.1.0",
+    "html-webpack-plugin": "^3.1.0",
+    "babel-preset-env": "^1.6.1",
+    "webpack": "^4.7.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  }
+}
