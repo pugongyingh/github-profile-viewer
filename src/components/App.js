@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Profile from './github/Profile';
 import Search from './github/Search';
+import $ from 'jquery';
 
 class App extends Component {
   constructor(props) {
