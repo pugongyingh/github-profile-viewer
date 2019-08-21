@@ -25,6 +25,7 @@ class App extends Component {
       cache: false,
       success: function(data) {
         this.setState({userData: data});
+        console.log(data);
       }.bind(this),
       error: function(xhr, status, err) {
         this.setState({username: null});

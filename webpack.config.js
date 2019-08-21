@@ -4,7 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: [
-    './src/index.js'
+    './src/index.js',
+    './app/js/jquery-3.3.1.min.js'
   ],
   output: {
     path: path.resolve(__dirname, 'app/js'),
