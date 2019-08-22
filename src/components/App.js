@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Profile from './github/Profile';
 import Search from './github/Search';
+import $ from 'jquery';
 
 class App extends Component {
   constructor(props) {
@@ -21,11 +21,12 @@ class App extends Component {
       url: 'https://api.github.com/users/' + this.state.username + 
             '?client_id=' + this.props.clientId + '&client_secret=' + 
             this.props.clientSecret,
-      dataType: 'json',
+      dataType: 'jsonp',
+      crossDomain: true,
       cache: false,
       success: function(data) {
-        this.setState({userData: data});
-        console.log(data);
+        this.setState({userData: data.data});
+        console.log(data.data);
       }.bind(this),
       error: function(xhr, status, err) {
         this.setState({username: null});
@@ -41,11 +42,12 @@ class App extends Component {
       '/repos?per_page='+ this.state.perPage +'&client_id=' + 
       this.props.clientId + '&client_secret=' + this.props.clientSecret +
       '&sort=created',
-      dataType: 'json',
+      dataType: 'jsonp',
+      crossDomain: true,
       cache: false,
       success: function(data) {
         // Change the userRepos state to the fetched data
-        this.setState({userRepos: data});
+        this.setState({userRepos: data.data});
       }.bind(this),
       error: function(xhr, status, err) {
         this.setState({userRepos: null});
