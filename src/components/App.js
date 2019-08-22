@@ -70,12 +70,13 @@ class App extends Component {
     this.getUserData();
     this.getUserRepos();
   }
-
+  
   // Show content on the page
   render() {
+    // console.log(this.props);
     return(
       <div>
-        <Search onFormSubmit={this.handleFormSubmit.bind(this)} />
+        <Search onFormSubmit={this.handleFormSubmit.bind(this)} {...this.props} />
         <Profile {...this.state} />
       </div>
     )
