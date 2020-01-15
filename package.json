@@ -23,6 +23,9 @@
     "node-libs-browser": "^2.1.0",
     "postcss-loader": "^3.0.0",
     "style-loader": "^1.0.0",
+    "cheerio": "^1.0.0-rc.3",
+    "html-minifier": "^4.0.0",
+    "iconv-lite": "^0.4.24",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0"
