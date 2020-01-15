@@ -11,11 +11,11 @@ exports.handler = async function(event, context) {
        // NOT res.status >= 200 && res.status < 300
        return { statusCode: response.status, body: response.statusText };
      }
-     const data = await response.json();
+     const data = await response.text();
 
      return {
        statusCode: 200,
-       body: JSON.stringify({ msg: data })
+       body: data 
      };
    } catch (err) {
      console.log(err); // output to netlify function log
