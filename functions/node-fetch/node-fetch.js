@@ -1,4 +1,7 @@
 /* eslint-disable */
+const cheerio = require("cheerio");
+const iconv = require('iconv-lite');
+
 const fetch = require("node-fetch");
 exports.handler = async function(event, context) {
    try {
